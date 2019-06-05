@@ -46,12 +46,12 @@ void CRYPTO_get_mem_functions(void* (__cdecl** m) (size_t),
 
 static int dynamic_load(ENGINE* e, dynamic_data_ctx* ctx)
 {
-	//dynamic_fns fns;
+	dynamic_fns fns;
 
-	//CRYPTO_get_mem_functions(&fns.mem_fns.malloc_cb,
-	//	&fns.mem_fns.realloc_cb, &fns.mem_fns.free_cb);
+	CRYPTO_get_mem_functions(&fns.mem_fns.malloc_cb,
+		&fns.mem_fns.realloc_cb, &fns.mem_fns.free_cb);
 
-	//return 1;
+	return 1;
 }
 
 int __cdecl main()
