@@ -102,9 +102,9 @@ typedef struct st_CRYPTO_EX_DATA_IMPL CRYPTO_EX_DATA_IMPL;
 typedef struct CRYPTO_dynlock_value* (*dyn_dynlock_create_cb) (const char*, int);
 typedef struct st_dynamic_data_ctx dynamic_data_ctx;
 
-typedef void* (*dyn_MEM_malloc_cb) (size_t);
-typedef void* (*dyn_MEM_realloc_cb) (void*, size_t);
-typedef void (*dyn_MEM_free_cb) (void*);
+typedef void* (__cdecl *dyn_MEM_malloc_cb) (size_t);
+typedef void* (__cdecl *dyn_MEM_realloc_cb) (void*, size_t);
+typedef void (__cdecl *dyn_MEM_free_cb) (void*);
 typedef void (*dyn_lock_locking_cb) (int, int, const char*, int);
 typedef void (*dyn_dynlock_lock_cb) (int, struct CRYPTO_dynlock_value*, const char*, int);
 typedef void (*dyn_dynlock_destroy_cb) (struct CRYPTO_dynlock_value*, const char*, int);
