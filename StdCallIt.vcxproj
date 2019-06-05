@@ -127,6 +127,12 @@
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aliases.h" />
+    <ClInclude Include="Funcs.h" />
+    <ClInclude Include="Macros.h" />
+    <ClInclude Include="Structs.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
